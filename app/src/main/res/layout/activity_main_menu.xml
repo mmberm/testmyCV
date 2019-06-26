@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/divProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/divProfile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/profile_skills_card_view"
+        style="@style/CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_view_margin"
+        android:padding="@dimen/card_view_margin"
+        app:layout_constraintBottom_toTopOf="@+id/goToSchoolButton"
+        app:layout_constraintTop_toBottomOf="@+id/divProfile">
+
+
+        <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="20dp"
+            android:background="@color/colorCardView">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/divProfileVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <TextView
+                android:id="@+id/nameLabelTextView"
+                style="@style/textResumeCVLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                app:layout_constraintBottom_toTopOf="@+id/ageTextView"
+                app:layout_constraintEnd_toStartOf="@+id/divProfileVertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                style="@style/textResumeCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/ageTextView"
+                app:layout_constraintStart_toEndOf="@+id/divProfileVertical"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ageLabelTextView"
+                style="@style/textResumeCVLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age"
+                app:layout_constraintBottom_toTopOf="@+id/telHomeTextView"
+                app:layout_constraintEnd_toStartOf="@+id/divProfileVertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+            <TextView
+                android:id="@+id/ageTextView"
+                style="@style/textResumeCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/telHomeTextView"
+                app:layout_constraintStart_toEndOf="@+id/divProfileVertical"
+                app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+            <TextView
+                android:id="@+id/telHomeLabelTextView"
+                style="@style/textResumeCVLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_tel"
+                app:layout_constraintBottom_toTopOf="@+id/telCellPhoneTextView"
+                app:layout_constraintEnd_toStartOf="@+id/divProfileVertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ageTextView" />
+
+            <TextView
+                android:id="@+id/telHomeTextView"
+                style="@style/textResumeCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/telCellPhoneTextView"
+                app:layout_constraintStart_toEndOf="@+id/divProfileVertical"
+                app:layout_constraintTop_toBottomOf="@+id/ageTextView" />
+
+            <TextView
+                android:id="@+id/telCellPhoneLabelTextView"
+                style="@style/textResumeCVLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mobile_number"
+                app:layout_constraintBottom_toTopOf="@+id/professionTextView"
+                app:layout_constraintEnd_toStartOf="@+id/divProfileVertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/telHomeTextView" />
+
+            <TextView
+                android:id="@+id/telCellPhoneTextView"
+                style="@style/textResumeCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/professionTextView"
+                app:layout_constraintStart_toEndOf="@+id/divProfileVertical"
+                app:layout_constraintTop_toBottomOf="@+id/telHomeTextView" />
+
+            <TextView
+                android:id="@+id/professionLabelTextView"
+                style="@style/textResumeCVLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profession"
+                app:layout_constraintBottom_toTopOf="@+id/curpTextView"
+                app:layout_constraintEnd_toStartOf="@+id/divProfileVertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/telCellPhoneTextView" />
+
+            <TextView
+                android:id="@+id/professionTextView"
+                style="@style/textResumeCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/curpTextView"
+                app:layout_constraintStart_toEndOf="@+id/divProfileVertical"
+                app:layout_constraintTop_toBottomOf="@+id/telCellPhoneTextView" />
+
+            <TextView
+                android:id="@+id/curpLabelTextView"
+                style="@style/textResumeCVLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/curp"
+                app:layout_constraintBottom_toTopOf="@+id/rfcTextView"
+                app:layout_constraintEnd_toStartOf="@+id/divProfileVertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/professionTextView" />
+
+            <TextView
+                android:id="@+id/curpTextView"
+                style="@style/textResumeCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/rfcTextView"
+                app:layout_constraintStart_toEndOf="@+id/divProfileVertical"
+                app:layout_constraintTop_toBottomOf="@+id/professionTextView" />
+
+            <TextView
+                android:id="@+id/rfcLabelTextView"
+                style="@style/textResumeCVLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rfc"
+                app:layout_constraintBottom_toTopOf="@+id/nationalityTextView"
+                app:layout_constraintEnd_toStartOf="@+id/divProfileVertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/curpTextView" />
+
+            <TextView
+                android:id="@+id/rfcTextView"
+                style="@style/textResumeCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/nationalityTextView"
+                app:layout_constraintStart_toEndOf="@+id/divProfileVertical"
+                app:layout_constraintTop_toBottomOf="@+id/curpTextView" />
+
+            <TextView
+                android:id="@+id/nationalityLabelTextView"
+                style="@style/textResumeCVLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nationality"
+                app:layout_constraintBottom_toTopOf="@+id/addressTextView"
+                app:layout_constraintEnd_toStartOf="@+id/divProfileVertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rfcTextView" />
+
+            <TextView
+                android:id="@+id/nationalityTextView"
+                style="@style/textResumeCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/addressTextView"
+                app:layout_constraintStart_toEndOf="@+id/divProfileVertical"
+                app:layout_constraintTop_toBottomOf="@+id/rfcTextView" />
+
+            <TextView
+                android:id="@+id/addressLabelTextView"
+                style="@style/textResumeCVLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/divProfileVertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nationalityTextView" />
+
+            <TextView
+                android:id="@+id/addressTextView"
+                style="@style/textResumeCV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingRight="15dip"
+                android:minLines="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/divProfileVertical"
+                app:layout_constraintTop_toBottomOf="@+id/nationalityTextView" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieLoading"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="113dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="lottie_loader.json"
+        app:lottie_loop="true" />
+
+    <Button
+        android:id="@+id/goToSchoolButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/education"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/goToProfessionalButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/goToProfessionalButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/experience"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/goToSchoolButton" />
+
+</android.support.constraint.ConstraintLayout>

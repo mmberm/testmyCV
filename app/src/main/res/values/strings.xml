@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">CVApp</string>
+    <string name="education">Educación</string>
+    <string name="experience">Experiencia</string>
+    <string name="professional_trajectory">TRAYECTORIA PROFESIONAL</string>
+    <string name="school_trajectory">TRAYECTORIA ESCOLAR</string>
+    <string name="curriculum_vitae">Curriculum Vitae</string>
+    <string name="level">Nivel:</string>
+    <string name="connection_error">Hubo un problema con su internet.</string>
+    <string name="timeout_error">No hubo respuesta, intentalo nuevamente.</string>
+    <string name="generic_error">Se produjo un error. Perdon </string>
+    <string name="realm_error">Se produjo un error en la base. Perdón </string>
+    <string name="name">Nombre:</string>
+    <string name="age">Edad:</string>
+    <string name="home_tel">Tel casa:</string>
+    <string name="mobile_number">Celular</string>
+    <string name="profession">Profesion:</string>
+    <string name="curp">Curp:</string>
+    <string name="rfc">Rfc:</string>
+    <string name="nationality">Nacionalidad:</string>
+    <string name="address">Dirección:</string>
+</resources>
